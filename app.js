@@ -1,5 +1,7 @@
 "use strict";
 
+const grid = document.querySelector(".grid");
+
 const myLibrary = [];
 
 function elementFromHTML(html) {
