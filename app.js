@@ -34,7 +34,7 @@ function addBookToLibrary(title, author, pageQuantity, readStatus) {
 
 function renderLibrary(book) {
   const bookCard = elementFromHTML(`
-    <article class="book">
+    <article class="book" id="${book.uuid}}">
       <h3 class="book__title">${book.title}</h3>
       <p class="book__author">${book.author}</p>
       <p class="book__pages">${book.pageQuantity}</p>
