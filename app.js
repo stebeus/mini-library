@@ -39,6 +39,7 @@ function renderLibrary(book) {
       <p class="book__author">${book.author}</p>
       <p class="book__pages">${book.pageQuantity}</p>
       <button type="button">${book.readStatus}</button>
+      <button type="button" id="remove">Remove</button>
     </article>
   `);
   grid.appendChild(bookCard);
