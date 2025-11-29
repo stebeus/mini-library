@@ -22,3 +22,15 @@ function addBookToLibrary(title, author, pageQuantity, readStatus) {
   const book = new Book(title, author, pageQuantity, readStatus);
   myLibrary.push(book);
 }
+
+function renderLibrary(book) {
+  const bookCard = elementFromHTML(`
+    <article class="book">
+      <h3 class="book__title">${book.title}</h3>
+      <p class="book__author">${book.author}</p>
+      <p class="book__pages">${book.pageQuantity}</p>
+      <button type="button">${book.readStatus}</button>
+    </article>
+  `);
+  grid.appendChild(bookCard);
+}
