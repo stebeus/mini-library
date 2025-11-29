@@ -1,6 +1,7 @@
 "use strict";
 
 const grid = document.querySelector(".grid");
+const modal = document.querySelector(".modal");
 
 const myLibrary = [];
 
