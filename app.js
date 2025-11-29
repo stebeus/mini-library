@@ -58,3 +58,6 @@ function submitBook() {
   grid.innerHTML = "";
   myLibrary.forEach(renderLibrary);
 }
+
+delegateEvent("click", "button", () => modal.showModal());
+delegateEvent("submit", "form", submitBook, modal);
