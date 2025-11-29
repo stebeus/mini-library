@@ -43,3 +43,18 @@ function renderLibrary(book) {
   `);
   grid.appendChild(bookCard);
 }
+
+function submitBook() {
+  const title = document.querySelector("#title").value;
+  const author = document.querySelector("#author").value;
+  const pageQuantity = document.querySelector("#page-quantity").value;
+  const readStatus = document.querySelector("#read-status");
+
+  if (readStatus.checked) readStatus.value = "Read";
+  else readStatus.value = "Not read";
+
+  addBookToLibrary(title, author, pageQuantity, readStatus.value);
+
+  grid.innerHTML = "";
+  myLibrary.forEach(renderLibrary);
+}
