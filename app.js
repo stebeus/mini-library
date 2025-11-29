@@ -10,6 +10,14 @@ function elementFromHTML(html) {
   return template.content.firstElementChild;
 }
 
+function delegateEvent(type, selector, callback, parent = document) {
+  parent.addEventListener(type, (e) => {
+    if (e.target.closest(selector)) {
+      callback(e);
+    }
+  });
+}
+
 function Book(title, author, pageQuantity, readStatus) {
   this.title = title;
   this.author = author;
