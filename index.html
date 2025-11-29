@@ -39,6 +39,25 @@
           >
         </p>
       </footer>
+      <dialog class="modal">
+        <form method="dialog">
+          <h2>Enter book details:</h2>
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="text" id="author" placeholder="Author" required />
+          <input
+            type="number"
+            id="page-quantity"
+            placeholder="Page quantity"
+            min="1"
+            required
+          />
+          <label for="read-status">
+            Have you read it?
+            <input type="checkbox" id="read-status" />
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </dialog>
     </div>
     <script src="app.js"></script>
   </body>
