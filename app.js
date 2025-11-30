@@ -34,11 +34,11 @@ function addBookToLibrary(title, author, pageQuantity, readStatus) {
 
 function renderLibrary(book) {
   const bookCard = elementFromHTML(`
-    <article class="book" id="${book.uuid}}">
+    <article class="book" id="${book.uuid}">
       <h3 class="book__title">${book.title}</h3>
       <p class="book__author">${book.author}</p>
       <p class="book__pages">${book.pageQuantity}</p>
-      <button type="button">${book.readStatus}</button>
+      <button type="button" id="toggle-read">${book.readStatus}</button>
       <button type="button" id="remove">Remove</button>
     </article>
   `);
@@ -68,6 +68,24 @@ function removeBook(btn) {
   myLibrary.forEach(renderLibrary);
 }
 
+function toggleReadStatus(btn) {
+  const bookUUID = btn.target.closest(".book").id;
+
+  myLibrary.find((book) => {
+    if (book.uuid === bookUUID) {
+      if (book.readStatus === "Not read") {
+        return (book.readStatus = "Read");
+      } else {
+        return (book.readStatus = "Not read");
+      }
+    }
+  });
+
+  grid.innerHTML = "";
+  myLibrary.forEach(renderLibrary);
+}
+
 delegateEvent("click", "#add-book", () => modal.showModal());
 delegateEvent("submit", "form", submitBook, modal);
+delegateEvent("click", "#toggle-read", toggleReadStatus);
 delegateEvent("click", "#remove", removeBook);
