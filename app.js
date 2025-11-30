@@ -47,7 +47,10 @@ function renderLibrary(book) {
 
 function clearForm() {
   const inputs = document.querySelectorAll("input");
-  inputs.forEach((input) => (input.value = ""));
+  inputs.forEach((input) => {
+    input.value = "";
+    if (input.checked) input.checked = false;
+  });
 }
 
 function submitBook() {
