@@ -3,7 +3,7 @@
 const grid = document.querySelector(".grid");
 const modal = document.querySelector(".modal");
 
-const myLibrary = [];
+let myLibrary = [];
 
 function elementFromHTML(html) {
   const template = document.createElement("template");
@@ -72,7 +72,8 @@ function submitBook() {
 
 function removeBook(btn) {
   const bookUUID = btn.target.closest(".book").id;
-  myLibrary.splice(bookUUID, 1);
+
+  myLibrary = myLibrary.filter((book) => book.uuid !== bookUUID);
 
   grid.innerHTML = "";
   myLibrary.forEach(renderLibrary);
