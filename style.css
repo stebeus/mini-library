@@ -12,6 +12,8 @@
 }
 
 .app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   min-height: 100dvh;
   font-family: system-ui, sans-serif;
 }
