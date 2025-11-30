@@ -45,6 +45,11 @@ function renderLibrary(book) {
   grid.appendChild(bookCard);
 }
 
+function clearForm() {
+  const inputs = document.querySelectorAll("input");
+  inputs.forEach((input) => (input.value = ""));
+}
+
 function submitBook() {
   const title = document.querySelector("#title").value;
   const author = document.querySelector("#author").value;
@@ -58,6 +63,8 @@ function submitBook() {
 
   grid.innerHTML = "";
   myLibrary.forEach(renderLibrary);
+
+  clearForm();
 }
 
 function removeBook(btn) {
