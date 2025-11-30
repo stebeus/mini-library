@@ -23,6 +23,11 @@ img {
   max-width: 100%;
 }
 
+header {
+  padding: 1rem;
+  background-color: lightgray;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
