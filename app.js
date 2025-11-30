@@ -68,6 +68,6 @@ function removeBook(btn) {
   myLibrary.forEach(renderLibrary);
 }
 
-delegateEvent("click", "button", () => modal.showModal());
+delegateEvent("click", "#add-book", () => modal.showModal());
 delegateEvent("submit", "form", submitBook, modal);
 delegateEvent("click", "#remove", removeBook);
