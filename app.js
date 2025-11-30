@@ -60,5 +60,14 @@ function submitBook() {
   myLibrary.forEach(renderLibrary);
 }
 
+function removeBook(btn) {
+  const bookUUID = btn.target.closest(".book").id;
+  myLibrary.splice(bookUUID, 1);
+
+  grid.innerHTML = "";
+  myLibrary.forEach(renderLibrary);
+}
+
 delegateEvent("click", "button", () => modal.showModal());
 delegateEvent("submit", "form", submitBook, modal);
+delegateEvent("click", "#remove", removeBook);
