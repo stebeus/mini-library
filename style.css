@@ -18,13 +18,13 @@
   font-family: system-ui, sans-serif;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1rem;
-}
-
-img {
-  display: block;
-  max-width: 100%;
 }
