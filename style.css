@@ -28,6 +28,20 @@ header {
   background-color: lightgray;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 2rem;
+  font-weight: 600;
+
+  & svg {
+    width: 1em;
+    height: auto;
+    font-size: calc(3rem);
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
