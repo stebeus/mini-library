@@ -47,3 +47,19 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(10rem, 20rem));
   justify-content: space-evenly;
 }
+
+.book {
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.book__heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.book__body {
+  line-height: 1.5;
+}
