@@ -23,6 +23,13 @@ img {
   max-width: 100%;
 }
 
+button {
+  display: block;
+  min-width: 7rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem auto 0;
+}
+
 header {
   padding: 1rem;
   background-color: lightgray;
