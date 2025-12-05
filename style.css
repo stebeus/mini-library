@@ -71,3 +71,20 @@ header {
 .book__body {
   line-height: 1.5;
 }
+
+footer > * {
+  display: flex;
+}
+
+.source-code::before {
+  content: "|";
+  margin: 0 1rem;
+}
+
+.source-code {
+  display: flex;
+}
+
+.icon {
+  margin-right: 0.25rem;
+}
