@@ -37,7 +37,7 @@ function renderLibrary(book) {
     <article class="book" id="${book.uuid}">
       <h3 class="book__title">${book.title}</h3>
       <p class="book__body">${book.author}</p>
-      <p class="book__body">${book.pageQuantity}</p>
+      <p class="book__body">${book.pageQuantity} pages</p>
       <button type="button" id="toggle-read">${book.readStatus}</button>
       <button type="button" id="remove">Remove</button>
     </article>
