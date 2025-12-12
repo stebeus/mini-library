@@ -19,12 +19,14 @@ function delegateEvent(type, selector, callback, parent = document) {
   });
 }
 
-function Book(title, author, pageQuantity, readStatus) {
-  this.title = title;
-  this.author = author;
-  this.pageQuantity = pageQuantity;
-  this.readStatus = readStatus;
-  this.uuid = crypto.randomUUID();
+class Book {
+  constructor(title, author, pageQuantity, readStatus) {
+    this.title = title;
+    this.author = author;
+    this.pageQuantity = pageQuantity;
+    this.readStatus = readStatus;
+    this.uuid = crypto.randomUUID();
+  }
 }
 
 function addBookToLibrary(title, author, pageQuantity, readStatus) {
